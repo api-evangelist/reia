@@ -1,0 +1,387 @@
+aid: reia
+name: Real Estate Institute of Australia
+slug: reia
+homeMarket: Australia
+tier: industry-body
+reviewer: API Evangelist
+reviewed: '2026-07-26'
+
+review:
+  question: >-
+    Does the Real Estate Institute of Australia publish a reachable, documented public API surface, and
+    what is its RESO posture as the national industry body for Australian real estate?
+  answer: >-
+    No. REIA publishes no API of any kind. Its entire public estate is a 19-page platformOS/Insites
+    marketing and ecommerce site at www.reia.com.au (reia.asn.au 301-redirects to it). Every developer
+    subdomain probed fails to resolve, every contract path returns 404, and there is no OpenAPI, Swagger,
+    OData $metadata, GraphQL, webhook, SDK or Postman artifact anywhere on the estate. RESO does not appear
+    once across any page of the site, and REIA holds no RESO certification - RESO is a NAR-mandated United
+    States construct and has no Australian counterpart. What REIA sells is the DATA, as paid document
+    subscriptions, not machine access to it.
+  date: '2026-07-26'
+
+sectorPosture:
+  resoPosture: >-
+    No RESO reference found. RESO is absent from Australia. All 19 pages of www.reia.com.au were fetched
+    and grepped for "RESO", "Data Dictionary", "Web API", "OData", "$metadata", "UPI", "REAXML" and
+    "IDX": zero hits (the only matches for the substring were the English word "resource" and CSS/JS
+    tokens containing "api"). The public RESO certificate directory at https://www.reso.org/certificates/
+    (HTTP 200, fetched 2026-07-26, 416,233 bytes) was fetched and grepped for "Australia", "Australian",
+    "REIA" and ".au": zero hits - no Australian organisation appears in the RESO certificate directory at
+    all. https://www.reso.org/certification/ (HTTP 200) likewise names no Australian certificand. REIA
+    does have a documented institutional relationship with NAR - NAR is listed as an alliance on
+    https://www.reia.com.au/our-network alongside REINZ, FIABCI and ASBEC, and REIA notes a further
+    relationship with the California Association of REALTORS - but that alliance carries no standards
+    obligation into Australia. Australia's machine-readable property rails sit outside REIA entirely:
+    listing syndication runs through REA Group's realestate.com.au and Domain, electronic conveyancing
+    through PEXA, valuation through PropTrack and CoreLogic, and title through the state land registries.
+    REIA publishes conduct principles and accreditation criteria, not a data standard.
+  resoCertified: false
+  resoCertifiedEvidence: >-
+    Defensible on two independent probes. (1) The public RESO certificate directory
+    (https://www.reso.org/certificates/, HTTP 200) contains no entry for the Real Estate Institute of
+    Australia, for any Australian state institute, or for any Australian organisation. (2) REIA's own site
+    never mentions RESO, the RESO Data Dictionary, the RESO Web API or the Universal Property/Parcel
+    Identifier. REIA operates no MLS and no listing database, so there is nothing for it to certify.
+  resoArtifactsProbed:
+  - url: https://www.reso.org/certificates/
+    status: 200
+    note: >-
+      Public certificate directory, 416,233 bytes, fetched anonymously. Zero occurrences of Australia,
+      Australian, REIA, or the .au TLD.
+  - url: https://www.reso.org/certification/
+    status: 200
+    note: Public certification programme page. No Australian certificand named.
+  - url: https://certification.reso.org/
+    status: 400
+    note: RESO Analytics bare host returns 400; per-certificate summaries are linked from reso.org/certificates.
+  - url: https://www.reia.com.au/Reso
+    status: 404
+    note: No RESO landing page on the REIA estate.
+  - url: https://www.reia.com.au/odata
+    status: 404
+  - url: https://www.reia.com.au/$metadata
+    status: 404
+    note: No OData service document or EDMX metadata is served anywhere on the REIA estate.
+  universalPropertyIdentifier:
+    found: false
+    note: >-
+      No UPI, no Universal Parcel Identifier, and no Australian equivalent parcel identifier scheme is
+      published by REIA. Australian parcel identity lives with the state land registries and with PEXA's
+      conveyancing workflow, neither of which REIA operates or documents.
+  standardsPublished:
+  - name: REIA National Principles of Conduct
+    url: https://www.reia.com.au/conduct
+    freelyDownloadable: false
+    note: >-
+      The principles are summarised in prose on the /conduct page (agents must act in clients' best
+      interests and act ethically, fairly and honestly with all parties), and REIA states it also applies
+      FIABCI's International Code of Ethics as the Australian chapter of FIABCI. The only linked PDF of the
+      document itself, https://reia.com.au/wp-content/uploads/2024/07/Principles-of-Conduct-2012.pdf, is a
+      dead link from the previous WordPress site and returns HTTP 404. The standard REIA administers is
+      therefore currently NOT downloadable in full from its own site - the summary is public, the document
+      is not reachable.
+  - name: REIA Associate (AREI) and Fellow accreditation criteria
+    url: https://www.reia.com.au/accredit
+    freelyDownloadable: true
+    note: >-
+      Criteria and application forms are public PDFs on the Insites CDN (criteria_for_1_associateship.pdf,
+      criteria_for_fellowship.pdf, apply_for_associateship.pdf, apply_for_fellowship.pdf). Applications are
+      emailed to reia@reia.com.au, must be endorsed by the applicant's state or territory institute (which
+      requires being a member of it) and approved by REIA. Application fee AUD 300 + GST for Associate,
+      AUD 850 + GST for Fellow, payable only on approval; the cycle runs roughly a full business quarter.
+  certificationDirectory:
+    published: false
+    note: >-
+      REIA publishes no public directory of who holds AREI or Fellow accreditation, and no directory of
+      accredited agents or agencies. There is nothing analogous to the RESO certificate directory. Agent
+      licensing in Australia is a state and territory regulator function, and REIA directs consumer
+      complaints to those regulators rather than handling them itself.
+
+accessGate:
+  classification: membership-required
+  whatADeveloperMustSignOrJoin: >-
+    Nothing a developer signs gets them an API, because there is no API. Three separate gates exist and
+    none of them is a developer gate. (1) DATA: the quarterly research is sold as subscriptions through the
+    site's platformOS ecommerce module with Stripe checkout - HAR AUD 450 and REMF AUD 450 for the flagship
+    reports, plus AUD 280 each for the 7 HAR datasets and the 15 REMF datasets. A buyer creates an account
+    at https://www.reia.com.au/create-account (email, personal details, company details) and accepts the
+    REIA Website Terms and Conditions, whose clause 6 states all content is owned by REIA and "You may not
+    reproduce, distribute, or resell any content without written permission. Use of data in any way must be
+    referenced to the Real Estate Institute of Australia." Subscriptions bill in advance in AUD including
+    GST and auto-renew. That account unlocks documents, not endpoints. (2) MEMBERSHIP: REIA's members are
+    the eight state and territory institutes, not individuals - an agent joins their state REI, and REI
+    membership requires accepting the Code of Conduct. (3) ACCREDITATION: AREI and Fellowship both require
+    existing state institute membership plus state endorsement plus REIA board approval plus a fee.
+    Affiliate Membership for major real estate networks is by invitation of the REIA Board only, with
+    expressions of interest emailed to the REIA President.
+  gated: true
+  selfServePortal: false
+  selfServePortalNote: >-
+    https://www.reia.com.au/sign-in is a subscriber login for purchased reports and datasets. Its form
+    POSTs to /api/sessions, which is the platformOS session endpoint for the site itself (GET returns 404,
+    text/html); it is CMS plumbing, not a documented developer API, and it is not listed in apis.yml.
+
+openData:
+  exists: false
+  note: >-
+    No open data. The Australian counterweight in this sector is government-side (ABS, state land
+    registries, data.gov.au), not REIA. REIA's quarterly HAR and REMF series - which run back to 1982 and
+    are subscribed to by Federal Treasury, the Reserve Bank, all state and territory treasuries, investment
+    banks and consultancies - are paid, licensed, document-delivered products. What IS freely downloadable
+    without an account, confirmed HTTP 200 and application/pdf, is REIA's advocacy and narrative output:
+    policy submissions (Pre-budget Submission 26/27, AML/CTF rules submissions, Registry Stabilisation and
+    Uplift, NatHERS, CGT discount, Federal Election Guide) at /submissions, standalone research reports
+    (Build to Rent, Property Management Action Plan, CRE EOFY Economic Outlook, CRE Sustainability 2023) at
+    /standalone-research, the REIA Strategic Plan 2026-28, and First AML/REIA AML fact sheets. All are PDFs.
+    None is machine-readable, none is an API, and none carries an open licence.
+
+authModel:
+  scheme: >-
+    Email and password against the site's own platformOS/Insites account system. No API authentication
+    scheme exists because no API exists.
+  apiKeys: false
+  oauth: false
+  openidConnect:
+    probed:
+    - url: https://www.reia.com.au/.well-known/openid-configuration
+      status: 404
+    found: false
+    note: No OIDC discovery document is served anonymously. No SAML or SSO federation is advertised.
+  sso: >-
+    None published. The word "sso" appears only as a CSS/asset token in the sign-in page markup, not as an
+    identity federation offering.
+  payments: >-
+    Stripe, referenced in the platformOS ecommerce module assets on the research pages. Cart and checkout
+    are first-party site features, not an exposed API.
+
+probes:
+  identity:
+  - url: https://reia.asn.au/
+    status: 301
+    note: Redirects to https://reia.com.au/ and then to https://www.reia.com.au/ (final 200). The .asn.au
+      domain is a redirect only; the live estate is reia.com.au.
+  - url: https://www.reia.asn.au/
+    status: 200
+    note: Resolves to https://www.reia.com.au/ after redirect.
+  - url: https://www.reia.com.au/
+    status: 200
+    note: 'Title "REIA | Real Estate Institute of Australia", meta description "Over 100 years of serving
+      the real estate industry." Built by Combinate, powered by Insites on platformOS (Sydney instance
+      699).'
+  - url: https://www.reia.com.au/robots.txt
+    status: 200
+    note: 'Two lines - "User-agent: * / Allow: /" plus the sitemap reference. Nothing disallowed.'
+  - url: https://www.reia.com.au/sitemap.xml
+    status: 200
+    note: >-
+      19 URLs total, harvested and reviewed in full - submissions, research, standalone-research,
+      media-contact, our-network, who-we-are, aml-ctf, residential-energy-efficiency, contact-us, accredit,
+      austros, conduct, nafe, home, privacy-policy, disclaimer, create-account, sign-in, forgot-password.
+      Zero developer, API, docs, swagger or openapi pages. This is the entire public estate.
+  - url: https://api.github.com/orgs/reia
+    status: 200
+    note: >-
+      NOT the Real Estate Institute of Australia. The GitHub org "reia" is "A Ruby-like programming
+      language for the Erlang VM" (reia-lang.org, created 2016, 1 repo). No REIA GitHub organisation was
+      found; none is linked from the site.
+  developerSubdomains:
+  - url: https://developer.reia.com.au/
+    status: 000
+    note: Does not resolve.
+  - url: https://developers.reia.com.au/
+    status: 000
+    note: Does not resolve.
+  - url: https://api.reia.com.au/
+    status: 000
+    note: Does not resolve.
+  - url: https://docs.reia.com.au/
+    status: 000
+    note: Does not resolve.
+  - url: https://developer.reia.asn.au/
+    status: 000
+    note: Does not resolve.
+  - url: https://api.reia.asn.au/
+    status: 000
+    note: Does not resolve.
+  contractPaths:
+  - url: https://www.reia.com.au/developers
+    status: 404
+  - url: https://www.reia.com.au/api
+    status: 404
+  - url: https://www.reia.com.au/docs
+    status: 404
+  - url: https://www.reia.com.au/openapi.json
+    status: 404
+  - url: https://www.reia.com.au/swagger.json
+    status: 404
+  - url: https://www.reia.com.au/api-docs
+    status: 404
+  - url: https://www.reia.com.au/api/openapi.json
+    status: 404
+  - url: https://www.reia.com.au/api/v1
+    status: 404
+  - url: https://www.reia.com.au/graphql
+    status: 404
+  - url: https://www.reia.com.au/api/graphql
+    status: 404
+  - url: https://www.reia.com.au/wp-json
+    status: 404
+    note: Confirms the previous WordPress estate is gone; the site is platformOS now.
+  - url: https://www.reia.com.au/api/sessions
+    status: 404
+    note: >-
+      GET returns 404 text/html. This path is the POST target of the sign-in form (platformOS session
+      creation) and is the only /api/ path referenced anywhere in the markup. Not a documented API.
+  wellKnown:
+  - url: https://www.reia.com.au/.well-known/security.txt
+    status: 404
+  - url: https://www.reia.com.au/.well-known/openid-configuration
+    status: 404
+  - url: https://www.reia.com.au/.well-known/ai-plugin.json
+    status: 404
+  - url: https://www.reia.com.au/llms.txt
+    status: 404
+  feeds:
+  - url: https://www.reia.com.au/rss
+    status: 404
+  - url: https://www.reia.com.au/feed
+    status: 404
+  - url: https://www.reia.com.au/industry-news/rss
+    status: 200
+    note: >-
+      Soft 404 - returns text/html (the platformOS page shell), not application/rss+xml. There is no feed.
+      Industry news is HTML only at /industry-news; distribution is a monthly email newsletter signup form.
+  documents:
+  - url: https://uploads.prod01.sydney.platformos.com/instances/699/property_uploads/modules/website/submissions/document/3a12430b-2ae4-41ba-be24-e65f18c9920c/REIA_PrebudgetSubmission_2627.pdf
+    status: 200
+    contentType: application/pdf
+    note: Free, anonymous. Representative of the /submissions library.
+  - url: https://uploads.prod01.sydney.platformos.com/instances/699/property_uploads/modules/website/standalone_research/document/60bd78de-20fa-4618-adbf-13cfe6953627/BTR-Report_ReleaseVersion.pdf
+    status: 200
+    contentType: application/pdf
+    note: Free, anonymous. REIA Build to Rent Report.
+  - url: https://uploads.prod01.sydney.platformos.com/instances/699/property_uploads/modules/website/who_we_are___strategy/document/84d47879-1a79-47ca-b4d3-5b52cf2c433c/REIA%20Strategic%20Plan%202026-28.pdf
+    status: 200
+    contentType: application/pdf
+    note: Free, anonymous. REIA Strategic Plan 2026-28.
+  - url: https://reia.com.au/wp-content/uploads/2024/07/Principles-of-Conduct-2012.pdf
+    status: 404
+    note: >-
+      Dead link to the REIA National Principles of Conduct on the retired WordPress estate, still linked
+      from a live page. The standard REIA administers is not currently downloadable from its own site.
+
+harvest:
+  specsCount: 0
+  collectionsCount: 0
+  artifacts: []
+  note: >-
+    Nothing was harvested because nothing machine-readable exists. No openapi/ directory was created. No
+    OpenAPI, Swagger, OData $metadata, AsyncAPI, GraphQL schema, JSON Schema, Postman collection or
+    .well-known document is published on any REIA-controlled host.
+
+absences:
+  api: >-
+    Total. REIA publishes no API. This is not a gated API - it is the absence of one.
+  webhooks: None. No callback, event or subscription surface of any kind.
+  sdks: None. No client libraries, no GitHub organisation.
+  postman: None.
+  graphql: None found.
+  mcp: None found.
+  statusPage: None found.
+  changelog: None published.
+  securityTxt: Absent - /.well-known/security.txt returns 404.
+  vulnerabilityDisclosure: None published.
+  rateLimits: Not applicable - no API.
+  pricing: >-
+    Published, but for DATA rather than API access - HAR AUD 450, REMF AUD 450, and AUD 280 per dataset
+    across 7 HAR datasets and 15 REMF datasets, listed openly on /research/har and /research/remf.
+
+organisationFacts:
+  founded: 1924
+  headquarters: Canberra, Australian Capital Territory, Australia
+  structure: >-
+    Federation. Members are the state and territory Real Estate Institutes - REIACT, REINSW, REINT, REISA,
+    REIT, REIV, REIWA - which REIA states represent 85% of all Australian real estate businesses and
+    agents. Board is composed of state and territory representatives; a small executive team is based in
+    Canberra.
+  programmes:
+  - REIA National Principles of Conduct
+  - Associate (AREI) and Fellow accreditation
+  - Australasian Auctioneering Championships (AUSTROS) and Australasian Novice Auctioneering Championships (ANAC), run jointly with REINZ
+  - National Awards for Excellence (NAFE)
+  - Housing Affordability Report (HAR), quarterly
+  - Real Estate Market Facts (REMF), quarterly
+  - Government submissions and advocacy, including AML/CTF Tranche 2 readiness for the 1 July 2026 commencement
+  alliances:
+  - Real Estate Institute of New Zealand (REINZ)
+  - FIABCI (Paris-based international property federation; REIA is the Australian chapter)
+  - National Association of REALTORS (NAR), United States, plus a relationship with the California Association of REALTORS
+  - Australian Sustainable Built Environment Council (ASBEC)
+  partners:
+  - REI Super
+  - First AML
+  technologyStack: >-
+    platformOS (Sydney instance 699) with the Insites CMS and ecommerce modules, built by Combinate, with
+    Stripe for payments. Assets are served from uploads.prod01.sydney.platformos.com and, for some
+    accreditation and AML PDFs, cdn.staging.oregon.platform-os.com.
+
+findings:
+  summary: >-
+    REIA is the Australian control case for this sector study's central question, and it answers it by
+    absence. The United States has a mandated machine-readable contract because an industry body, NAR,
+    imposed RESO on the MLSs it governs. Australia's national industry body imposes nothing of the kind:
+    REIA is a federation of state institutes that writes conduct principles, awards accreditations, runs
+    awards and auctioneering competitions, and publishes quarterly housing research. It does not sit on the
+    transaction rail. Australia's genuinely machine-readable property infrastructure exists - PEXA is the
+    closest thing in this whole study to a required national electronic settlement rail, listings are
+    duopolised by REA Group and Domain, valuation by PropTrack and CoreLogic - but every one of those rails
+    is commercial and none of them answers to REIA. The result is a 19-page site with zero developer
+    surface, zero RESO footprint, and a paywall around the one dataset REIA genuinely owns. The distinction
+    the study cares about lands cleanly here: there is no certification to confuse with reachability,
+    because there is neither. What a would-be consumer of REIA data actually does is create an account,
+    accept terms that forbid redistribution, pay AUD 280 to AUD 450, and download a document.
+  statusCall: built-stub
+  statusRationale: >-
+    Identity only. No API, no developer portal, no machine-readable contract, and no open data were found
+    after exhaustive probing of the full 19-URL sitemap, four developer subdomain patterns on two domains,
+    eleven contract paths, four well-known paths and three feed paths. apis[] is correctly empty. The
+    research subscription storefront is a paid document product behind an account, not a developer surface.
+
+sources:
+- url: https://www.reia.com.au/
+  type: Website
+  note: Homepage, fetched 2026-07-26, HTTP 200.
+- url: https://www.reia.com.au/who-we-are
+  type: About
+  note: Founded 1924, Canberra team, board of state and territory representatives.
+- url: https://www.reia.com.au/our-network
+  type: Network
+  note: State institute members, affiliate membership by board invitation, partners (REI Super, First AML), alliances (REINZ, FIABCI, NAR, ASBEC).
+- url: https://www.reia.com.au/conduct
+  type: CodeOfConduct
+  note: REIA National Principles of Conduct summarised; the linked full PDF 404s.
+- url: https://www.reia.com.au/accredit
+  type: Certification
+  note: AREI and Fellow criteria, state endorsement requirement, AUD 300 and AUD 850 + GST fees, email-based application.
+- url: https://www.reia.com.au/research/har
+  type: Pricing
+  note: HAR flagship subscription AUD 450 plus 7 datasets at AUD 280 each.
+- url: https://www.reia.com.au/research/remf
+  type: Pricing
+  note: REMF flagship subscription AUD 450 plus 15 datasets at AUD 280 each.
+- url: https://www.reia.com.au/standalone-research
+  type: Reports
+  note: States the quarterly underlying data dates back to 1982 and is subscribed to by Federal Treasury, the Reserve Bank, state and territory treasuries, investment banks and consultancies.
+- url: https://www.reia.com.au/create-account
+  type: TermsOfService
+  note: Registration terms - AUD pricing incl. GST, auto-renewing subscriptions, clause 6 forbids reproduction, distribution or resale without written permission and requires attribution to REIA.
+- url: https://www.reia.com.au/aml-ctf
+  type: Compliance
+  note: AML/CTF Tranche 2 obligations commence 1 July 2026 for selling and buyer's agents and direct property sellers; AUSTRAC guidance and First AML fact sheets.
+- url: https://www.reso.org/certificates/
+  type: Certification
+  note: Public RESO certificate directory - no Australian organisation listed.
+- url: https://www.reso.org/certification/
+  type: Certification
+  note: Public RESO certification programme page - no Australian certificand named.

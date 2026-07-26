@@ -1,0 +1,104 @@
+aid: reia
+url: https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/apis.yml
+name: Real Estate Institute of Australia
+kind: company
+description: >-
+  The Real Estate Institute of Australia (REIA), founded in 1924 and based in Canberra, is the national
+  federation of the eight state and territory Real Estate Institutes (REINSW, REIV, REIQ, REIWA, REISA,
+  REIT, REIACT, REINT), which between them represent roughly 85% of Australian real estate businesses and
+  agents. REIA is a policy, research and accreditation body, not an operator of market infrastructure: it
+  administers the REIA National Principles of Conduct that underpin state institute codes and training,
+  awards Associate (AREI) and Fellow accreditations, runs the Australasian Auctioneering Championships
+  (AUSTROS) jointly with REINZ and the National Awards for Excellence (NAFE), makes submissions to the
+  Commonwealth Government, and publishes the quarterly Housing Affordability Report (HAR) and Real Estate
+  Market Facts (REMF) series that Federal Treasury, the Reserve Bank, state treasuries and investment banks
+  subscribe to. It sits well above the transaction rail in the Australian value chain - listings run
+  through REA Group's realestate.com.au and Domain, settlement through PEXA, valuation through PropTrack
+  and CoreLogic, and title through the state land registries - and REIA touches none of those pipes. Its
+  API posture is therefore an honest absence: no developer portal, no API subdomain, no OpenAPI or OData
+  contract, and no RESO reference anywhere on its estate, because RESO is a NAR-mandated United States
+  construct with no Australian counterpart. What REIA sells is data, not access to it - the HAR and REMF
+  reports are AUD 450 subscriptions and each of the 7 HAR and 15 REMF underlying datasets is a separate
+  AUD 280 subscription, delivered as documents through a platformOS/Insites ecommerce storefront with
+  Stripe checkout behind an email-and-password account. Policy submissions, standalone research reports and
+  the strategic plan are freely downloadable PDFs; the quarterly numbers are not, and there is no open data.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reia.png
+tags:
+- Real Estate
+- Australia
+- Industry Body
+- Standards
+- Membership
+- Property Data
+- Housing Affordability
+- Research
+- Advocacy
+- Rentals
+- PropTech
+created: '2026-07-26'
+modified: '2026-07-26'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.reia.com.au/
+- type: About
+  url: https://www.reia.com.au/who-we-are
+- name: REIA member, affiliate, partner and alliance network
+  type: Network
+  url: https://www.reia.com.au/our-network
+- name: REIA National Principles of Conduct
+  type: CodeOfConduct
+  url: https://www.reia.com.au/conduct
+- name: REIA Associate (AREI) and Fellow accreditation
+  type: Certification
+  url: https://www.reia.com.au/accredit
+- name: REIA research - Housing Affordability Report and Real Estate Market Facts
+  type: Research
+  url: https://www.reia.com.au/research
+- name: Housing Affordability Report (HAR) subscriptions and datasets
+  type: Pricing
+  url: https://www.reia.com.au/research/har
+- name: Real Estate Market Facts (REMF) subscriptions and datasets
+  type: Pricing
+  url: https://www.reia.com.au/research/remf
+- name: REIA standalone research reports (free PDFs)
+  type: Reports
+  url: https://www.reia.com.au/standalone-research
+- name: REIA submissions to government (free PDFs)
+  type: Policy
+  url: https://www.reia.com.au/submissions
+- name: AML/CTF Tranche 2 obligations for real estate professionals from 1 July 2026
+  type: Compliance
+  url: https://www.reia.com.au/aml-ctf
+- type: News
+  url: https://www.reia.com.au/industry-news
+- type: Media
+  url: https://www.reia.com.au/media-contact
+- name: Australasian Auctioneering Championships (AUSTROS)
+  type: Events
+  url: https://www.reia.com.au/austros
+- name: National Awards for Excellence (NAFE)
+  type: Events
+  url: https://www.reia.com.au/nafe
+- name: Subscriber account sign-in (report and dataset portal, not a developer portal)
+  type: SignIn
+  url: https://www.reia.com.au/sign-in
+- name: REIA Website Terms and Conditions
+  type: TermsOfService
+  url: https://www.reia.com.au/create-account
+- type: PrivacyPolicy
+  url: https://www.reia.com.au/privacy-policy
+- type: Disclaimer
+  url: https://www.reia.com.au/disclaimer
+- type: Contact
+  url: https://www.reia.com.au/contact-us
+- type: LinkedIn
+  url: https://www.linkedin.com/company/real-estate-institute-of-australia-reia
+- type: Facebook
+  url: https://www.facebook.com/REIAustralia
+- type: Instagram
+  url: https://www.instagram.com/reiaustralia
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
