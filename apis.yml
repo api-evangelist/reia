@@ -40,6 +40,9 @@ modified: '2026-07-26'
 specificationVersion: '0.19'
 apis: []
 common:
+- name: Domain security posture (TLS, HSTS, DNSSEC, CAA, SPF, DMARC) probed 2026-07-26
+  type: DomainSecurity
+  url: security/reia-domain-security.yml
 - type: Website
   url: https://www.reia.com.au/
 - type: About
@@ -71,6 +74,9 @@ common:
 - name: AML/CTF Tranche 2 obligations for real estate professionals from 1 July 2026
   type: Compliance
   url: https://www.reia.com.au/aml-ctf
+- name: Residential energy efficiency - Home Energy Ratings Disclosure Framework and NatHERS
+  type: Policy
+  url: https://www.reia.com.au/residential-energy-efficiency
 - type: News
   url: https://www.reia.com.au/industry-news
 - type: Media
@@ -84,6 +90,9 @@ common:
 - name: Subscriber account sign-in (report and dataset portal, not a developer portal)
   type: SignIn
   url: https://www.reia.com.au/sign-in
+- name: Create a REIA subscriber account (report and dataset purchase, not developer onboarding)
+  type: SignUp
+  url: https://www.reia.com.au/create-account
 - name: REIA Website Terms and Conditions
   type: TermsOfService
   url: https://www.reia.com.au/create-account
@@ -93,6 +102,12 @@ common:
   url: https://www.reia.com.au/disclaimer
 - type: Contact
   url: https://www.reia.com.au/contact-us
+- name: /.well-known/ discovery probe - no documents served (recorded absence)
+  type: WellKnownProbe
+  url: well-known/reia-well-known.yml
+- name: llms.txt for the REIA public estate (generated from this index)
+  type: LLMsTxt
+  url: llms/reia-llms.txt
 - type: LinkedIn
   url: https://www.linkedin.com/company/real-estate-institute-of-australia-reia
 - type: Facebook

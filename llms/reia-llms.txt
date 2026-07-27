@@ -1,0 +1,62 @@
+# Real Estate Institute of Australia (REIA)
+
+> The national federation of Australia's eight state and territory Real Estate Institutes, founded in 1924
+> and based in Canberra. REIA is a policy, research and accreditation body — it administers the REIA
+> National Principles of Conduct, awards Associate (AREI) and Fellow accreditation, runs the Australasian
+> Auctioneering Championships and the National Awards for Excellence, makes submissions to the Commonwealth
+> Government, and publishes the quarterly Housing Affordability Report (HAR) and Real Estate Market Facts
+> (REMF) series. It does not operate market infrastructure: Australian listings run through REA Group and
+> Domain, settlement through PEXA, valuation through PropTrack and CoreLogic, and title through the state
+> land registries.
+
+## API surface
+
+REIA publishes **no API**. There is no developer portal, no API subdomain, no OpenAPI/Swagger, no OData
+`$metadata`, no GraphQL, no AsyncAPI, no webhooks, no SDKs, no Postman collection, no MCP server and no
+`/.well-known/` documents. RESO — the United States listing-data standard mandated by NAR — has no
+Australian counterpart and appears nowhere on the REIA estate; no Australian organisation appears in the
+public RESO certificate directory. What REIA sells is the data itself as paid document subscriptions, not
+machine access to it. See `review.yml` in this repository for the full probe record.
+
+- [Probe record (review.yml)](https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/review.yml): every subdomain, contract path, feed and `/.well-known/` path probed, with HTTP status.
+- [Well-known index](https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/well-known/reia-well-known.yml): the `/.well-known/` discovery surface — all 404.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/security/reia-domain-security.yml): TLS, HSTS, DNSSEC, CAA, SPF and DMARC posture for reia.com.au.
+
+## Research and data (paid, document-delivered)
+
+- [Research overview](https://www.reia.com.au/research): the HAR and REMF quarterly series.
+- [Housing Affordability Report (HAR)](https://www.reia.com.au/research/har): flagship report subscription plus seven separately-priced underlying datasets.
+- [Real Estate Market Facts (REMF)](https://www.reia.com.au/research/remf): flagship report subscription plus fifteen separately-priced underlying datasets.
+- [Standalone research reports](https://www.reia.com.au/standalone-research): free PDFs — Build to Rent, Property Management Action Plan, CRE outlooks.
+- [Subscriber sign-in](https://www.reia.com.au/sign-in): report and dataset account login. Not a developer portal.
+- [Create an account](https://www.reia.com.au/create-account): registration plus the Website Terms and Conditions, whose clause 6 forbids reproduction, distribution or resale of content without written permission and requires attribution to REIA.
+
+## Standards, conduct and accreditation
+
+- [REIA National Principles of Conduct](https://www.reia.com.au/conduct): the principles state institute codes and training are built on.
+- [Associate (AREI) and Fellow accreditation](https://www.reia.com.au/accredit): criteria, application forms and fees; requires state or territory institute endorsement.
+- [Member, affiliate, partner and alliance network](https://www.reia.com.au/our-network): the eight state and territory institutes, plus REINZ, FIABCI, NAR and ASBEC.
+
+## Policy and advocacy
+
+- [Submissions to government](https://www.reia.com.au/submissions): free PDFs.
+- [AML/CTF Tranche 2](https://www.reia.com.au/aml-ctf): obligations for real estate professionals from 1 July 2026.
+- [Residential energy efficiency](https://www.reia.com.au/residential-energy-efficiency): the Home Energy Ratings Disclosure Framework and NatHERS.
+
+## Organisation
+
+- [Who we are](https://www.reia.com.au/who-we-are)
+- [Industry news](https://www.reia.com.au/industry-news)
+- [Australasian Auctioneering Championships (AUSTROS)](https://www.reia.com.au/austros)
+- [National Awards for Excellence (NAFE)](https://www.reia.com.au/nafe)
+- [Media contact](https://www.reia.com.au/media-contact)
+- [Contact](https://www.reia.com.au/contact-us)
+- [Privacy policy](https://www.reia.com.au/privacy-policy)
+- [Disclaimer](https://www.reia.com.au/disclaimer)
+
+## Optional
+
+- [APIs.json index for this provider](https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/apis.yml)
+- [LinkedIn](https://www.linkedin.com/company/real-estate-institute-of-australia-reia)
+- [Facebook](https://www.facebook.com/REIAustralia)
+- [Instagram](https://www.instagram.com/reiaustralia)
