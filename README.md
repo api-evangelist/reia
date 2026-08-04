@@ -1,5 +1,47 @@
 # Real Estate Institute of Australia (reia)
 
+<!-- API-EVANGELIST-PROVENANCE:BEGIN -->
+> ### About this repository
+>
+> **This is not our API.** This repository is an independent, third-party profile of a company's
+> **publicly available** API surface, maintained by [API Evangelist](https://apievangelist.com).
+> API Evangelist does not operate, host, resell, or support this company's APIs, and is not
+> affiliated with or endorsed by the company unless stated on the profile.
+>
+> **Where the information came from.** Everything here is assembled from material a member of the
+> public can reach with a browser and no credentials — the company's own website, developer portal
+> and documentation, the specifications it publishes for public use (OpenAPI, AsyncAPI, JSON Schema,
+> `apis.json`, `llms.txt` and similar), its public repositories, and its public status, pricing and
+> changelog pages. **Nothing here is obtained by breaching a system, defeating an access control, or
+> using credentials of any kind.**
+>
+> **The rating is an independent assessment.** The Kin Score and Agent Readiness rating are
+> independently calculated scores of a company's *public* API artifacts, produced by API Evangelist
+> against a published rubric. They are not certifications, endorsements, security assessments, or
+> audits, and they score published artifacts — not the quality, safety, or security of the software.
+>
+> **Corrections, re-scores, and removal are free.** No partnership, contract, or purchase is
+> required, and you do not need to justify the request.
+>
+> - **Something wrong?** Open an issue on this repository, or email
+>   [info@apievangelist.com](mailto:info@apievangelist.com).
+> - **Published something new?** Ask for a re-score and we will re-run the rating.
+> - **Want the listing taken down?** Say so and we will honor it. The profile is reduced to your
+>   company name, a factual description, and a link to your own site, and the company is recorded as
+>   **unrated** — never scored zero for having asked.
+>
+> **Response times.** Acknowledgement within **one business day**; removal or restriction within
+> **two business days**; corrections and re-scores within **five business days**.
+>
+> **On a security or compliance team?** Email
+> [info@apievangelist.com](mailto:info@apievangelist.com) with *security* in the subject line and
+> you will get a person, not a form. We will tell you exactly which public URLs this profile was
+> built from so your team can see the same surface we did, and we will take the listing down on
+> request while you work through it.
+>
+> Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
+<!-- API-EVANGELIST-PROVENANCE:END -->
+
 The Real Estate Institute of Australia (REIA), founded in 1924 and based in Canberra, is the national federation of the eight state and territory Real Estate Institutes (REINSW, REIV, REIQ, REIWA, REISA, REIT, REIACT, REINT), which between them represent roughly 85% of Australian real estate businesses and agents. REIA is a policy, research and accreditation body, not an operator of market infrastructure: it administers the REIA National Principles of Conduct that underpin state institute codes and training, awards Associate (AREI) and Fellow accreditations, runs the Australasian Auctioneering Championships (AUSTROS) jointly with REINZ and the National Awards for Excellence (NAFE), makes submissions to the Commonwealth Government, and publishes the quarterly Housing Affordability Report (HAR) and Real Estate Market Facts (REMF) series that Federal Treasury, the Reserve Bank, state treasuries and investment banks subscribe to. It sits well above the transaction rail in the Australian value chain — listings run through REA Group's realestate.com.au and Domain, settlement through PEXA, valuation through PropTrack and CoreLogic, and title through the state land registries — and REIA touches none of those pipes. Its API posture is therefore an honest absence: no developer portal, no API subdomain, no OpenAPI or OData contract, and no RESO reference anywhere on its estate, because RESO is a NAR-mandated United States construct with no Australian counterpart. What REIA sells is data, not access to it — the HAR and REMF reports are AUD 450 subscriptions and each of the 7 HAR and 15 REMF underlying datasets is a separate AUD 280 subscription, delivered as documents through a platformOS/Insites ecommerce storefront with Stripe checkout behind an email-and-password account. Policy submissions, standalone research reports and the strategic plan are freely downloadable PDFs; the quarterly numbers are not, and there is no open data.
 
 **APIs.json:** [https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/reia/refs/heads/main/apis.yml)
