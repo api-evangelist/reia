@@ -22,6 +22,17 @@ description: >-
   AUD 280 subscription, delivered as documents through a platformOS/Insites ecommerce storefront with
   Stripe checkout behind an email-and-password account. Policy submissions, standalone research reports and
   the strategic plan are freely downloadable PDFs; the quarterly numbers are not, and there is no open data.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reia.png
 tags:
 - Real-Estate
