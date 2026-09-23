@@ -2,35 +2,39 @@ generated: '2026-07-26'
 method: searched
 source: live anonymous probes of the REIA public estate
 host: https://www.reia.com.au
-note: >-
-  REIA serves no /.well-known/ discovery surface. Every RFC-registered path probed below returns HTTP 404
-  from the platformOS/Insites site shell (text/html), on both www.reia.com.au and the bare reia.com.au
+note: 'REIA serves no /.well-known/ discovery surface. Every RFC-registered path probed below returns
+  HTTP 404 from the platformOS/Insites site shell (text/html), on both www.reia.com.au and the bare reia.com.au
   apex. There is no security.txt (RFC 9116), no OpenID Connect discovery document, no OAuth authorization
   server or protected resource metadata (RFC 8414 / RFC 9728), no api-catalog (RFC 9727), no AI plugin
-  manifest and no llms.txt. Recorded absence, not a gap in the probe: REIA publishes no API, so there is
-  no identity, catalog or agent-discovery surface to describe. No document was saved because none exists.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/oauth-protected-resource
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/mcp.json
-  status: 404
-- path: /.well-known/llms.txt
-  status: 404
-- path: /llms.txt
-  status: 404
+  manifest and no llms.txt. Recorded absence, not a gap in the probe: REIA publishes no API, so there
+  is no identity, catalog or agent-discovery surface to describe. No document was saved because none exists.'
 apex_documents:
 - host: https://reia.com.au
   path: /.well-known/security.txt
   status: 404
   note: The apex 301-redirects to www.reia.com.au; the redirected target is the same 404.
 found: 0
+hosts:
+- host: https://www.reia.com.au
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+  - path: /.well-known/llms.txt
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
